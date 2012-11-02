@@ -22,7 +22,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.wu-man</groupId>
     <artifactId>android-bsf-api</artifactId>
-    <version>3.1-SNAPSHOT</version>
+    <version>3.1</version>
 
     <parent>
         <groupId>org.sonatype.oss</groupId>
@@ -95,7 +95,7 @@
         <url>https://github.com/wuman/android-bsf-api</url>
         <connection>scm:git:git://github.com/wuman/android-bsf-api.git</connection>
         <developerConnection>scm:git:git@github.com:wuman/android-bsf-api.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>android-bsf-api-3.1</tag>
     </scm>
 
  
