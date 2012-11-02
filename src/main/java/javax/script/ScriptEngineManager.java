@@ -25,7 +25,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.imageio.spi.ServiceRegistry;
+import com.wuman.spi.ServiceRegistry;
 
 /**
  * See Javadoc of <a href="http://java.sun.com/javase/6/docs/api/javax/script/package-summary.html">Java Scripting API</a>
