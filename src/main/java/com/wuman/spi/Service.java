@@ -5,7 +5,7 @@
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 
-package sun.misc;
+package com.wuman.spi;
 
 import java.io.BufferedReader;
 import java.io.IOException;

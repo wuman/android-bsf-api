@@ -2,8 +2,6 @@ package com.wuman.spi;
 
 import java.util.Iterator;
 
-import sun.misc.Service;
-
 public class ServiceRegistry {
 
     // The following two methods expose functionality from
