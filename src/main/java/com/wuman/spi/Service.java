@@ -115,7 +115,7 @@ import java.util.TreeSet;
 
 public final class Service {
 
-    private static final String prefix = "ANDROID-META-INF/services";
+    private static final String prefix = "ANDROID-META-INF/services/";
 
     private Service() {
     }
