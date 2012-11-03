@@ -23,6 +23,7 @@
     <groupId>com.wu-man</groupId>
     <artifactId>android-bsf-api</artifactId>
     <version>3.2-SNAPSHOT</version>
+    <packaging>apklib</packaging>
 
     <parent>
         <groupId>org.sonatype.oss</groupId>
@@ -53,6 +54,8 @@
         <jakarta.compiler.version>2.3.1</jakarta.compiler.version>
 
         <android.version>4.1.1.4</android.version>
+        <android.platform>16</android.platform>
+        <android-maven.version>3.4.0</android-maven.version>
         <maven-source.version>2.2.1</maven-source.version>
         <maven-javadoc.version>2.9</maven-javadoc.version>
         <maven-eclipse.version>2.9</maven-eclipse.version>
@@ -118,6 +121,17 @@
     
     <build>
         <plugins>
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <version>${android-maven.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <sdk>
+                        <platform>${android.platform}</platform>
+                    </sdk>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
