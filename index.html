@@ -39,13 +39,18 @@
           <h1>ANDROID-BSF-API</h1>
 
 <p>Android-bsf-api is a port/fork of the Apache Commons Bean Scripting Framework
-API for the Android platform. It includes the <code>javax.script.*</code> classes.</p>
+API for the Android platform. It includes the <code>javax.script.*</code> classes defined
+in JSR-223.</p>
 
 <p>In addition to the bsf-api port, android-bsf-api also includes a modified
 implementation of the <code>sun.misc.Service</code> and the <code>javax.imageio.spi.ServiceRegistry</code>
-classes. These implementations look for service provider declarations in the
-<code>ANDROID-META-INF/services/</code> folder rather than the <code>META-INF/services</code> folder, 
-which is normally stripped away by the Android <code>dex</code> packager.</p>
+classes.</p>
+
+<p>By default the <code>ScriptEngineManager</code> uses the <code>java.util.ServiceLoader</code> to
+load factories for <code>ScriptEngine</code> implementations in the Android framework on
+Gingerbread+ devices. For devices lower than Gingerbread, the included
+<code>Service</code> and <code>ServiceRegistry</code> classes are used to support backward
+compatibility.</p>
 
 <p>More information about the original bsf-api can be found at the 
 <a href="http://commons.apache.org/bsf/">official BSF site</a>.</p>
@@ -63,7 +68,7 @@ the desired component of the library.</p>
 <pre><code>&lt;dependency&gt;
     &lt;groupId&gt;com.wu-man&lt;/groupId&gt;
     &lt;artifactId&gt;android-bsf-api&lt;/artifactId&gt;
-    &lt;version&gt;3.1.2&lt;/version&gt;
+    &lt;version&gt;3.1.3&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 </li>
