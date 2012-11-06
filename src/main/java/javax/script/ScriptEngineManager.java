@@ -24,6 +24,10 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.ServiceLoader;
+
+import android.annotation.TargetApi;
+import android.os.Build;
 
 import com.wuman.spi.ServiceRegistry;
 
@@ -69,8 +73,14 @@ public class ScriptEngineManager {
      * 
      * @param loader the classloader to use (may be <tt>null</tt>)
      */
+    @TargetApi(9)
     public ScriptEngineManager(ClassLoader loader) {
-        Iterator iterator = ServiceRegistry.lookupProviders(ScriptEngineFactory.class, loader);
+        Iterator iterator;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
+            iterator = ServiceLoader.load(ScriptEngineFactory.class, loader).iterator();
+        } else {
+            iterator = ServiceRegistry.lookupProviders(ScriptEngineFactory.class, loader);
+        }
 
         while (iterator.hasNext()) {
             ScriptEngineFactory factory;
