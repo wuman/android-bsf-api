@@ -1,42 +1,36 @@
 <!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Android-bsf-api by wuman</title>
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
-  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Android-bsf-api</h1>
+        <p class="header">Apache Bean Scripting Framework API for Android</p>
 
-  <title>Android-bsf-api</title>
-  <meta name="description" content="Apache Bean Scripting Framework API for Android">
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/wuman/android-bsf-api/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/wuman/android-bsf-api/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/wuman/android-bsf-api">View On GitHub</a></li>
+        </ul>
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/wuman">wuman</a></p>
 
-</head>
 
-<body>
-
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Android-bsf-api</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">Apache Bean Scripting Framework API for Android</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/wuman/android-bsf-api/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/wuman/android-bsf-api/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/wuman/android-bsf-api" class="code">View Android-bsf-api on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <h1>ANDROID-BSF-API</h1>
+      </header>
+      <section>
+        <h1>ANDROID-BSF-API</h1>
 
 <p>Android-bsf-api is a port/fork of the Apache Commons Bean Scripting Framework
 API for the Android platform. It includes the <code>javax.script.*</code> classes defined
@@ -46,11 +40,10 @@ in JSR-223.</p>
 implementation of the <code>sun.misc.Service</code> and the <code>javax.imageio.spi.ServiceRegistry</code>
 classes.</p>
 
-<p>By default the <code>ScriptEngineManager</code> uses the <code>java.util.ServiceLoader</code> to
-load factories for <code>ScriptEngine</code> implementations in the Android framework on
-Gingerbread+ devices. For devices lower than Gingerbread, the included
-<code>Service</code> and <code>ServiceRegistry</code> classes are used to support backward
-compatibility.</p>
+<p>On Gingerbread+ devices, the <code>ScriptEngineManager</code> uses the Android-native
+<code>java.util.ServiceLoader</code> to load <code>ScriptEngine</code> factories. For devices before 
+Gingerbread, factories are loaded via the included <code>Service</code> and <code>ServiceRegistry</code>
+classes to ensure backward compatibility.</p>
 
 <p>More information about the original bsf-api can be found at the 
 <a href="http://commons.apache.org/bsf/">official BSF site</a>.</p>
@@ -96,27 +89,13 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.    
 </code></pre>
-        </article>
-      </div>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
     </div>
-    <footer>
-      <div class="owner">
-      <p><a href="https://github.com/wuman" class="avatar"><img src="https://secure.gravatar.com/avatar/b2fd92f5f482b95fe6fa83c1da7fa115?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" height="48"/></a> <a href="https://github.com/wuman">wuman</a> maintains <a href="https://github.com/wuman/android-bsf-api">Android-bsf-api</a></p>
-
-
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="http://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/wuman/android-bsf-api/tarball/master" class="tar">tar</a><a href="https://github.com/wuman/android-bsf-api/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
-
-            <script type="text/javascript">
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -127,5 +106,5 @@ under the License.
             } catch(err) {}
           </script>
 
-</body>
+  </body>
 </html>
