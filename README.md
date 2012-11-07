@@ -9,11 +9,10 @@ In addition to the bsf-api port, android-bsf-api also includes a modified
 implementation of the `sun.misc.Service` and the `javax.imageio.spi.ServiceRegistry`
 classes.
 
-By default the `ScriptEngineManager` uses the `java.util.ServiceLoader` to
-load factories for `ScriptEngine` implementations in the Android framework on
-Gingerbread+ devices. For devices lower than Gingerbread, the included
-`Service` and `ServiceRegistry` classes are used to support backward
-compatibility.
+On Gingerbread+ devices, the `ScriptEngineManager` uses the Android-native
+`java.util.ServiceLoader` to load `ScriptEngine` factories. For devices before 
+Gingerbread, factories are loaded via the included `Service` and `ServiceRegistry`
+classes to ensure backward compatibility.
 
 More information about the original bsf-api can be found at the 
 [official BSF site](http://commons.apache.org/bsf/).
